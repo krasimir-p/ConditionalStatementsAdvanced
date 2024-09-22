@@ -15,7 +15,6 @@ int main()
 
     int deltaHours = 0;
     int deltaMinutes = examMinutesOfDay - arrivelMinutesOfDay;
-    
     if (deltaMinutes < 0) {
         deltaMinutes *= -1;
         deltaHours = deltaMinutes / 60;
@@ -24,7 +23,8 @@ int main()
         if (deltaHours) {
             cout << deltaHours << ":" << setw(2) << setfill('0') << deltaMinutes << " hours after the start" << endl;
         }
-        else { 
+        else {
+            //cout << setw(2) << setfill('0') << deltaMinutes << " minutes after the start" << endl;
             cout << deltaMinutes << " minutes after the start" << endl;
         }
     }
@@ -36,9 +36,10 @@ int main()
         deltaMinutes %= 60;
         cout << "Early" << endl;
         if (deltaHours) {
-            cout << deltaHours << ":"<< setw(2) << setfill('0') << deltaMinutes << " hours before the start" << endl;
+            cout << deltaHours << ":" << setw(2) << setfill('0') << deltaMinutes << " hours before the start" << endl;
         }
         else {
+            //cout << setw(2) << setfill('0') << deltaMinutes << " minutes before the start" << endl; 
             cout << deltaMinutes << " minutes before the start" << endl;
         }
     }
